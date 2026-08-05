@@ -1,0 +1,6 @@
+{
+  "name": "Содбилэг - Портфолио",
+  "description": "Содбилэгийн хувийн брэнд, хобби, волейбол болон сонирхдог зүйлсийн веб хуудас",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
