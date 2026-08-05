@@ -30,7 +30,7 @@ export const HobbiesGrid: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/15 text-[#111111] text-[10px] font-bold uppercase tracking-widest mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#D94F04]" />
+            <Sparkles className="w-3.5 h-3.5 text-black" />
             <span>Section 03 — Хоббинууд</span>
           </div>
           <h2 className="font-unbounded text-2xl sm:text-4xl font-black text-[#111111] uppercase tracking-tight mb-4">
@@ -46,12 +46,12 @@ export const HobbiesGrid: React.FC = () => {
           {HOBBIES.map((hobby, index) => (
             <div
               key={hobby.id}
-              className="relative bg-white border border-black/15 p-6 sm:p-8 hover:border-[#D94F04] transition-all duration-300 group shadow-sm flex flex-col justify-between"
+              className="relative bg-white border border-black/15 p-6 sm:p-8 hover:border-black transition-all duration-300 group shadow-sm flex flex-col justify-between"
             >
               <div>
                 {/* Badge & Icon */}
                 <div className="flex items-center justify-between mb-6 border-b border-black/10 pb-4">
-                  <div className="p-3 bg-[#F7F7F7] border border-black/10 group-hover:bg-[#D94F04] group-hover:text-white transition-colors">
+                  <div className="p-3 bg-[#F7F7F7] border border-black/10 group-hover:bg-[#111111] group-hover:text-white transition-colors">
                     {getIcon(hobby.icon)}
                   </div>
                   <span className="px-2 py-1 bg-[#111111] text-white text-[9px] font-bold uppercase tracking-widest">
@@ -63,7 +63,7 @@ export const HobbiesGrid: React.FC = () => {
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#111111]/50 block mb-1">
                   Figure 3.{index + 1} — {hobby.subtitle}
                 </span>
-                <h3 className="font-unbounded font-black text-lg text-[#111111] uppercase mb-3 group-hover:text-[#D94F04] transition-colors">
+                <h3 className="font-unbounded font-black text-lg text-[#111111] uppercase mb-3 group-hover:text-zinc-700 transition-colors">
                   {hobby.title}
                 </h3>
 
@@ -76,7 +76,7 @@ export const HobbiesGrid: React.FC = () => {
               {/* Action Button */}
               <button
                 onClick={() => scrollToTarget(hobby.id)}
-                className="inline-flex items-center justify-between w-full px-4 py-3 bg-[#111111] hover:bg-[#D94F04] text-white font-bold text-[11px] tracking-widest uppercase transition-all duration-200 cursor-pointer"
+                className="inline-flex items-center justify-between w-full px-4 py-3 bg-[#111111] hover:bg-zinc-800 text-white font-bold text-[11px] tracking-widest uppercase transition-all duration-200 cursor-pointer"
               >
                 <span>Үзэх & Тоглох</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

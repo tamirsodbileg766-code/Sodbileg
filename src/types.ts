@@ -48,3 +48,15 @@ export interface HobbyCard {
   badge: string;
   color: string;
 }
+
+export interface YoutubeTopic {
+  id: string;
+  title: string;
+  subtitle: string;
+  category: string;
+  iconName: string;
+  summary: string;
+  keyFacts: string[];
+  visualTag: string;
+  detailsMn: string;
+}

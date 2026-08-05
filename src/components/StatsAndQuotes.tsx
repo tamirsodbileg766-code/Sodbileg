@@ -6,15 +6,15 @@ export const StatsAndQuotes: React.FC = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'User':
-        return <User className="w-5 h-5 text-[#D94F04]" />;
+        return <User className="w-5 h-5 text-black" />;
       case 'Activity':
-        return <Activity className="w-5 h-5 text-[#D94F04]" />;
+        return <Activity className="w-5 h-5 text-black" />;
       case 'Headphones':
-        return <Headphones className="w-5 h-5 text-[#D94F04]" />;
+        return <Headphones className="w-5 h-5 text-black" />;
       case 'Flame':
-        return <Flame className="w-5 h-5 text-[#D94F04]" />;
+        return <Flame className="w-5 h-5 text-black" />;
       default:
-        return <Star className="w-5 h-5 text-[#D94F04]" />;
+        return <Star className="w-5 h-5 text-black" />;
     }
   };
 
@@ -35,7 +35,7 @@ export const StatsAndQuotes: React.FC = () => {
           {STATS.map((stat) => (
             <div
               key={stat.id}
-              className="p-6 bg-white border border-black/20 shadow-sm hover:border-[#D94F04] transition-all duration-300 group"
+              className="p-6 bg-white border border-black/20 shadow-sm hover:border-black transition-all duration-300 group"
             >
               <div className="p-3 bg-[#F7F7F7] border border-black/10 w-fit mb-4 group-hover:bg-[#111111] group-hover:text-white transition-colors">
                 {getIcon(stat.iconName)}
@@ -70,13 +70,13 @@ export const StatsAndQuotes: React.FC = () => {
           {TESTIMONIALS.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="p-8 bg-white border border-black/20 shadow-sm relative flex flex-col justify-between hover:border-[#D94F04] transition-all"
+              className="p-8 bg-white border border-black/20 shadow-sm relative flex flex-col justify-between hover:border-black transition-all"
             >
-              <Quote className="w-8 h-8 text-[#D94F04]/20 absolute top-6 right-6" />
+              <Quote className="w-8 h-8 text-black/20 absolute top-6 right-6" />
 
               <div className="space-y-4 mb-8">
                 {/* Rating Stars */}
-                <div className="flex gap-1 text-[#D94F04]">
+                <div className="flex gap-1 text-black">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-current" />
                   ))}

@@ -9,7 +9,7 @@ export const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/15 text-[#111111] text-[10px] font-bold uppercase tracking-widest mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#D94F04]" />
+            <Sparkles className="w-3.5 h-3.5 text-black" />
             <span>Figure 02 — Миний тухай</span>
           </div>
           <h2 className="font-unbounded text-2xl sm:text-4xl font-black text-[#111111] uppercase tracking-tight">
@@ -42,7 +42,7 @@ export const About: React.FC = () => {
                 <h3 className="font-unbounded font-black text-xl text-[#111111] uppercase mb-1">
                   {PERSONAL_INFO.name}
                 </h3>
-                <p className="text-xs text-[#D94F04] font-bold tracking-widest uppercase mb-4">
+                <p className="text-xs text-[#111111] font-bold tracking-widest uppercase mb-4">
                   {PERSONAL_INFO.title}
                 </p>
 
@@ -51,27 +51,33 @@ export const About: React.FC = () => {
                     🏆 13 Настай
                   </span>
                   <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
-                    🏐 Спортын Тэмүүлэл
+                    🏐 Волейбол
                   </span>
                   <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
-                    🛡️ MLBB Tigreal Tank
+                    🎸 Гитарчин
                   </span>
                   <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
-                    🎧 Music Enthusiast
+                    🎵 Michael Jackson Fan
+                  </span>
+                  <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
+                    📺 "Гэж Юу Вэ?" YT
+                  </span>
+                  <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
+                    🛡️ MLBB Tigreal
                   </span>
                 </div>
 
                 <div className="pt-4 border-t border-black/10 text-left space-y-2">
                   <div className="flex items-center gap-3 text-xs text-[#111111]/80 font-medium">
-                    <User className="w-4 h-4 text-[#D94F04]" />
+                    <User className="w-4 h-4 text-black" />
                     <span>Нэр: <strong className="text-[#111111] font-bold">{PERSONAL_INFO.name}</strong></span>
                   </div>
                   <div className="flex items-center gap-3 text-xs text-[#111111]/80 font-medium">
-                    <Calendar className="w-4 h-4 text-[#D94F04]" />
+                    <Calendar className="w-4 h-4 text-black" />
                     <span>Нас: <strong className="text-[#111111] font-bold">{PERSONAL_INFO.age} настай</strong></span>
                   </div>
                   <div className="flex items-center gap-3 text-xs text-[#111111]/80 font-medium">
-                    <MapPin className="w-4 h-4 text-[#D94F04]" />
+                    <MapPin className="w-4 h-4 text-black" />
                     <span>Байршил: <strong className="text-[#111111] font-bold">{PERSONAL_INFO.location}</strong></span>
                   </div>
                 </div>
@@ -82,21 +88,21 @@ export const About: React.FC = () => {
           {/* About Content Text */}
           <div className="lg:col-span-7 space-y-6">
             <h3 className="font-unbounded text-2xl sm:text-3xl font-black text-[#111111] leading-snug uppercase">
-              "Бүх зүйлд чин сэтгэлээсээ, <span className="font-serif-editorial italic font-normal text-[#D94F04]">бууж өгөлгүй</span> зүтгэх нь миний зарчим."
+              "Бүх зүйлд чин сэтгэлээсээ, <span className="font-serif-editorial italic font-normal text-black">бууж өгөлгүй</span> зүтгэх нь миний зарчим."
             </h3>
 
             <p className="text-[#111111]/80 text-sm sm:text-base leading-relaxed font-medium">
-              Намайг Содбилэг гэдэг. Би одоогоор 13 настай. Миний амьдралын хамгийн том сонирхол ба энерги өгдөг зүйл бол <strong className="text-[#111111] font-bold underline decoration-[#D94F04]">волейболын спорт</strong> юм. Талбай дээр багийнхантайгаа хамтдаа тэмцэж, оновчтой дамжуулалт хийх тусам би өөрийгөө сорьж хөгжүүлдэг.
+              Намайг Содбилэг гэдэг. Би одоогоор 13 настай. Миний амьдралын хамгийн том сонирхол бол <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">волейболын спорт</strong> ба <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">гитар тоглох</strong> юм. Талбай дээр багийнхантайгаа тэмцэхийн сацуу гитараар дуртай аялгуугаа тоглож сонирхдог.
             </p>
 
             <p className="text-[#111111]/80 text-sm sm:text-base leading-relaxed font-medium">
-              Мөн бэлтгэлийн дараа эсвэл чөлөөт цагаараа <strong className="text-[#111111] font-bold underline decoration-[#D94F04]">Mobile Legends (MLBB)</strong> тоглож, өөрийн дуртай <strong className="text-[#111111] font-bold underline decoration-[#D94F04]">Tigreal</strong> танк баатар дээр Flicker + Implosion комбинациар багийг ялалтад хүргэдэг. Түүнчлэн <strong className="text-[#111111] font-bold underline decoration-[#D94F04]">Mxrning Star, The Lemons</strong> хамтлагийн дууг сонсож, <strong className="text-[#111111] font-bold underline decoration-[#D94F04]">Demon Slayer</strong> анимег шимтэн үздэг.
+              Бэлтгэлийн дараа эсвэл чөлөөт цагаараа <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Mobile Legends (MLBB)</strong> тоглож, өөрийн дуртай <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Tigreal</strong> танк баатар дээр тоглодог. Мөн <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Michael Jackson</strong>-ийн "Billie Jean", "Beat It", "Chicago", мөн <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Mxrning Star, The Lemons</strong> дууг сонсож, дуртай <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">"Гэж Юу Вэ?"</strong> YouTube суваг болон <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Demon Slayer</strong> анимег шимтэн үздэг.
             </p>
 
             {/* Quick Feature Checklist */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-black/15">
               <div className="flex items-start gap-3 p-3 bg-white border border-black/10">
-                <CheckCircle2 className="w-5 h-5 text-[#D94F04] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">Волейболын шийдэмгий цохилт</h4>
                   <p className="text-xs text-[#111111]/70 mt-1">Бөмбөг унах хүртэл багийн ажиллагааг эрхэмлэдэг.</p>
@@ -104,34 +110,34 @@ export const About: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3 p-3 bg-white border border-black/10">
-                <CheckCircle2 className="w-5 h-5 text-[#D94F04] shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">Гитар Тоглох & Хөгжим</h4>
+                  <p className="text-xs text-[#111111]/70 mt-1">Гитар тоглодог & Michael Jackson (Billie Jean, Beat It, Chicago), Mxrning Star.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-3 bg-white border border-black/10">
+                <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">"Гэж Юу Вэ?" YouTube Суваг</h4>
+                  <p className="text-xs text-[#111111]/70 mt-1">Дуртай танин мэдэхүйн сувгаа ашиглан шинэ зүйлсийг суралцдаг.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-3 bg-white border border-black/10">
+                <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">MLBB Tigreal Main Tank</h4>
                   <p className="text-xs text-[#111111]/70 mt-1">53.1% Winrate & Имплошн комбо мастер (850+ matches).</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 bg-white border border-black/10">
-                <CheckCircle2 className="w-5 h-5 text-[#D94F04] shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 bg-white border border-black/10 sm:col-span-2">
+                <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">Хөгжмийн нарийн мэдрэмж</h4>
-                  <p className="text-xs text-[#111111]/70 mt-1">Mxrning Star-ын R&B, лофай ба The Lemons-ийн инди рок хэмнэл.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3 bg-white border border-black/10">
-                <CheckCircle2 className="w-5 h-5 text-[#D94F04] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">Demon Slayer Амьсгал</h4>
-                  <p className="text-xs text-[#111111]/70 mt-1">Галын амьсгал ба Танжирогийн тууштай сэтгэлзүй.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3 bg-white border border-black/10">
-                <CheckCircle2 className="w-5 h-5 text-[#D94F04] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">Шинэ зүйлийг турших</h4>
-                  <p className="text-xs text-[#111111]/70 mt-1">Өдөр бүр суралцаж, ур чадвараа ахиулах тэмүүлэл.</p>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">Demon Slayer Аниме</h4>
+                  <p className="text-xs text-[#111111]/70 mt-1">Галын амьсгал ба Танжиро, Рэнгоку нарын тууштай дайчин сэтгэлзүй.</p>
                 </div>
               </div>
             </div>

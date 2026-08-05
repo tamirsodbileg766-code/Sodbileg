@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 border-b border-white/15 pb-12">
           {/* Logo Brand */}
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#D94F04] text-white">
-              <BatLogo size={24} className="text-white" />
+            <div className="p-2 bg-white text-[#111111]">
+              <BatLogo size={24} className="text-[#111111]" />
             </div>
             <div>
               <span className="font-unbounded font-black text-base text-white block uppercase tracking-wider">
@@ -33,28 +33,28 @@ export const Footer: React.FC = () => {
 
           {/* Nav Links */}
           <div className="flex flex-wrap justify-center gap-6 font-bold text-white/80 uppercase tracking-widest text-[10px]">
-            <button onClick={() => scrollTo('hero')} className="hover:text-[#D94F04] transition-colors cursor-pointer">
+            <button onClick={() => scrollTo('hero')} className="hover:text-white transition-colors cursor-pointer">
               Нүүр
             </button>
-            <button onClick={() => scrollTo('about')} className="hover:text-[#D94F04] transition-colors cursor-pointer">
+            <button onClick={() => scrollTo('about')} className="hover:text-white transition-colors cursor-pointer">
               Танилцуулга
             </button>
-            <button onClick={() => scrollTo('hobbies')} className="hover:text-[#D94F04] transition-colors cursor-pointer">
+            <button onClick={() => scrollTo('hobbies')} className="hover:text-white transition-colors cursor-pointer">
               Сонирхол
             </button>
-            <button onClick={() => scrollTo('volleyball')} className="hover:text-[#D94F04] transition-colors cursor-pointer">
+            <button onClick={() => scrollTo('volleyball')} className="hover:text-white transition-colors cursor-pointer">
               Волейбол
             </button>
-            <button onClick={() => scrollTo('mlbb')} className="hover:text-[#D94F04] transition-colors cursor-pointer">
+            <button onClick={() => scrollTo('mlbb')} className="hover:text-white transition-colors cursor-pointer">
               MLBB Tigreal
             </button>
-            <button onClick={() => scrollTo('music')} className="hover:text-[#D94F04] transition-colors cursor-pointer">
+            <button onClick={() => scrollTo('music')} className="hover:text-white transition-colors cursor-pointer">
               Хөгжим
             </button>
-            <button onClick={() => scrollTo('anime')} className="hover:text-[#D94F04] transition-colors cursor-pointer">
+            <button onClick={() => scrollTo('anime')} className="hover:text-white transition-colors cursor-pointer">
               Demon Slayer
             </button>
-            <button onClick={() => scrollTo('contact')} className="hover:text-[#D94F04] transition-colors cursor-pointer">
+            <button onClick={() => scrollTo('contact')} className="hover:text-white transition-colors cursor-pointer">
               Холбогдох
             </button>
           </div>
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
           {/* Back to top */}
           <button
             onClick={scrollToTop}
-            className="px-4 py-2 bg-white text-[#111111] hover:bg-[#D94F04] hover:text-white transition-all cursor-pointer flex items-center gap-2 font-bold uppercase tracking-widest text-[10px]"
+            className="px-4 py-2 bg-white text-[#111111] hover:bg-zinc-200 hover:text-[#111111] transition-all cursor-pointer flex items-center gap-2 font-bold uppercase tracking-widest text-[10px]"
             aria-label="Back to top"
           >
             <span>Дээшээ</span>
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
           <p>© {new Date().getFullYear()} Содбилэг. Эдиториал дизайн ба бүх эрх хуулиар хамгаалагдсан.</p>
           <p className="flex items-center gap-1 font-serif-editorial italic">
             <span>Волейболын тэмүүлэл ба дуу хөгжмөөр бүтээв</span>
-            <Heart className="w-3.5 h-3.5 text-[#D94F04] fill-current inline ml-1" />
+            <Heart className="w-3.5 h-3.5 text-white fill-current inline ml-1" />
           </p>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { VolleyballSection } from './components/VolleyballSection';
 import { MlbbTigrealSection } from './components/MlbbTigrealSection';
 import { MusicPlayerSection } from './components/MusicPlayerSection';
 import { AnimeSection } from './components/AnimeSection';
+import { YoutubeGejYuVeSection } from './components/YoutubeGejYuVeSection';
 import { StatsAndQuotes } from './components/StatsAndQuotes';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -38,6 +39,9 @@ export default function App() {
 
         {/* Demon Slayer / Anime Section */}
         <AnimeSection />
+
+        {/* "Гэж Юу Вэ?" YouTube Science & Astronomy Section */}
+        <YoutubeGejYuVeSection />
 
         {/* Highlight Stats & Testimonials */}
         <StatsAndQuotes />

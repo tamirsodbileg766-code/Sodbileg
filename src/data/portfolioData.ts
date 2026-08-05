@@ -1,19 +1,19 @@
-import { Track, BreathingStyle, Testimonial, StatItem, HobbyCard } from '../types';
+import { Track, BreathingStyle, Testimonial, StatItem, HobbyCard, YoutubeTopic } from '../types';
 
 export const PERSONAL_INFO = {
   name: 'Содбилэг',
   surname: 'Т.',
   age: 13,
-  title: 'Залуу тамирчин, MLBB Tigreal Танк, хөгжим сонирхогч & аниме хорхойтон',
-  tagline: 'Волейболын талбайн энерги, MLBB Tigreal-ийн хамгаалалт, Mxrning Star-ын аялгуу, Demon Slayer-ийн зориг тэвчээр.',
+  title: 'Залуу тамирчин, MLBB Tigreal Танк, гитарчин & Michael Jackson, YT сонирхогч',
+  tagline: 'Волейболын талбайн энерги, MLBB Tigreal-ийн хамгаалалт, Гитар & Michael Jackson, Mxrning Star-ын аялгуу, "Гэж Юу Вэ?" YT суваг, Demon Slayer-ийн зориг тэвчээр.',
   location: 'Улаанбаатар, Монгол',
-  aboutBrief: 'Би 13 настай. Волейболын спортоор хичээллэхийн зэрэгцээ Mobile Legends: Bang Bang (MLBB) тоглоомд Tigreal баатрыг голлон тоглодог Танк тоглогч. Чөлөөт цагаараа Mxrning Star, The Lemons хамтлагийн дуунуудыг сонсож, Demon Slayer аниме үзэх дуртай.',
-  email: 'sodbileg.volley@gmail.com',
-  phone: '+976 9911 ****',
+  aboutBrief: 'Би 13 настай. Волейболын спортоор хичээллэхийн зэрэгцээ гитар тоглодог. Mobile Legends (MLBB) тоглоомд Tigreal баатрыг голлон тоглодог. Чөлөөт цагаараа Michael Jackson (Billie Jean, Beat It, Chicago), Mxrning Star, The Lemons-ийн дуунуудыг сонсож, "Гэж Юу Вэ?" YouTube сувгийг шимтэн үзэж, Demon Slayer аниме үздэг.',
+  email: 'tamirsodbileg766@gmail.com',
+  phone: '+976 8081 5800',
   socials: {
-    instagram: '@sodbileg_vb',
-    facebook: 'Sodbileg Volley',
-    tiktok: '@sodbileg_vibe',
+    instagram: '@t.sdblg2',
+    facebook: 't.sdblg2',
+    tiktok: '@t.sdblg2',
   }
 };
 
@@ -21,11 +21,11 @@ export const HOBBIES: HobbyCard[] = [
   {
     id: 'volleyball',
     title: 'Волейбол',
-    subtitle: 'Багийн ажиллагаа & Эдренлин',
+    subtitle: 'Багийн ажиллагаа & Адреналин',
     description: 'Бөмбөг газар унах хүртэл тэмцэх нь миний хамгийн дуртай мэдрэмж. Хүчтэй довтолгоо, оновчтой дамжуулалт хийхэд анхаардаг.',
     icon: 'Volleyball',
     badge: 'Талбайн довтлогч',
-    color: 'from-amber-500 to-rose-600'
+    color: 'from-black via-zinc-800 to-zinc-900'
   },
   {
     id: 'mlbb',
@@ -34,29 +34,59 @@ export const HOBBIES: HobbyCard[] = [
     description: 'Tigreal бол миний хамгийн дуртай MLBB баатар. Flicker + Ultimate (Implosion) комбинациар тоглолтыг эргүүлэн багаа ялалтад хүргэх дуртай.',
     icon: 'Shield',
     badge: 'Tigreal Main Tank',
-    color: 'from-amber-600 to-orange-700'
+    color: 'from-[#111111] via-zinc-900 to-[#1e1e1e]'
   },
   {
     id: 'music',
-    title: 'Хөгжим Сонсох',
-    subtitle: 'Mxrning Star & The Lemons',
-    description: 'Mxrning Star-ын R&B, лофай, меланхолик аялгуу болон The Lemons-ийн классик инди рок хэмнэлүүд намайг эрч хүчээр цэнэглэдэг.',
+    title: 'Хөгжим & Гитар',
+    subtitle: 'Michael Jackson, Mxrning Star, Lemons',
+    description: 'Гитар тоглох дуртай! Michael Jackson-ийн "Billie Jean", "Beat It", "Chicago" дуунууд болон Mxrning Star, The Lemons-ийн хэмнэлүүд намайг үргэлж цэнэглэдэг.',
     icon: 'Music',
-    badge: '24/7 Вайб',
-    color: 'from-rose-500 to-purple-600'
+    badge: 'Гитарчин & 24/7 Вайб',
+    color: 'from-[#111111] via-zinc-800 to-black'
   },
   {
     id: 'anime',
-    title: 'Demon Slayer',
-    subtitle: 'Кимэцү но Яайба & Аниме',
-    description: 'Танжиро болон Рэнгоку нарын зорилгынхоо төлөө тууштай тэмцэх чанар намайг сургадаг. Амьсгалын техникүүд ба Ничирин сэлэмний тулаан үнэхээр сэтгэл хөдөлгөм.',
+    title: 'Demon Slayer & YouTube',
+    subtitle: 'Кимэцү но Яайба & "Гэж Юу Вэ?"',
+    description: 'Demon Slayer анимегийн Ничирин сэлэмний тулаан ба Танжирогийн тэвчээр, мөн дуртай "Гэж Юу Вэ?" YouTube суваг маань танин мэдэхүйн ертөнцөд хөтөлдөг.',
     icon: 'Flame',
-    badge: 'Demon Slayer Fan',
-    color: 'from-emerald-500 to-teal-700'
+    badge: 'Demon Slayer & YT Fan',
+    color: 'from-zinc-900 via-neutral-900 to-black'
   }
 ];
 
 export const TRACKS: Track[] = [
+  {
+    id: 'mj-1',
+    title: 'Billie Jean',
+    artist: 'Michael Jackson',
+    album: 'Thriller (1982)',
+    duration: '4:54',
+    coverUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80',
+    vibeTag: 'Michael Jackson — Pop / Dance Legend',
+    lyricsSnippet: '“Billie Jean is not my lover, she\'s just a girl who claims that I am the one...”'
+  },
+  {
+    id: 'mj-2',
+    title: 'Beat It',
+    artist: 'Michael Jackson',
+    album: 'Thriller (1982)',
+    duration: '4:18',
+    coverUrl: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80',
+    vibeTag: 'Michael Jackson — Rock / Pop Solo Guitar Solo',
+    lyricsSnippet: '“Just beat it, beat it, no one wants to be defeated...”'
+  },
+  {
+    id: 'mj-3',
+    title: 'Chicago',
+    artist: 'Michael Jackson',
+    album: 'Xscape (2014)',
+    duration: '4:05',
+    coverUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80',
+    vibeTag: 'Michael Jackson — Smooth Contemporary R&B',
+    lyricsSnippet: '“I met her on the way to Chicago, where she was going to meet her guy...”'
+  },
   {
     id: '1',
     title: 'Хүн',
@@ -106,8 +136,8 @@ export const BREATHING_STYLES: BreathingStyle[] = [
     nameEn: 'Sun Breathing',
     user: 'Камадо Танжиро',
     element: 'sun',
-    color: 'from-amber-500 via-orange-500 to-rose-600',
-    glowColor: 'rgba(245, 158, 11, 0.5)',
+    color: 'from-black via-zinc-800 to-zinc-900',
+    glowColor: 'rgba(255, 255, 255, 0.5)',
     quote: '“Хэзээ ч бүү бууж өг! Чамд хязгааргүй боломж бий.”',
     description: 'Бүх амьсгалын анхдагч эх үүсвэр. Хурц гэрэл, хязгааргүй дулаан ба шатамхай энергийг агуулдаг.',
     formsCount: 13
@@ -118,8 +148,8 @@ export const BREATHING_STYLES: BreathingStyle[] = [
     nameEn: 'Flame Breathing',
     user: 'Рэнгоку Кёжуро',
     element: 'fire',
-    color: 'from-red-600 via-orange-500 to-amber-400',
-    glowColor: 'rgba(239, 68, 68, 0.5)',
+    color: 'from-zinc-900 via-zinc-800 to-black',
+    glowColor: 'rgba(200, 200, 200, 0.5)',
     quote: '“Зүрхээ бадрааж, хязгаараа даван туул!”',
     description: 'Хүчтэй, халуун агаар болон галын дөл мэт шийдэмгий довтолгоог үзүүлдэг хашира нарын техник.',
     formsCount: 9
@@ -130,8 +160,8 @@ export const BREATHING_STYLES: BreathingStyle[] = [
     nameEn: 'Water Breathing',
     user: 'Томиока Гию',
     element: 'water',
-    color: 'from-cyan-500 via-blue-600 to-indigo-800',
-    glowColor: 'rgba(6, 182, 212, 0.5)',
+    color: 'from-black via-zinc-900 to-neutral-800',
+    glowColor: 'rgba(255, 255, 255, 0.4)',
     quote: '“Ус шиг уян хатан, тайван мөртлөө асар хүчтэй бай.”',
     description: 'Ямар ч нөхцөлд зохицож чадах, урсах ус мэт зөөлөн мөн аюултай далай мэт ширүүн амьсгал.',
     formsCount: 11
@@ -251,5 +281,53 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
     comment: 'Demon Slayer-ийн Рэнгокугийн тулааныг бидэнтэй хамт дахин дахин үзэж ярилцах үнэхээр сонирхолтой байдаг.',
     rating: 5
+  }
+];
+
+export const GEJ_YU_VE_TOPICS: YoutubeTopic[] = [
+  {
+    id: 'nuclear-bomb',
+    title: 'Цөмийн бөмбөг хэрхэн ажилладаг вэ?',
+    subtitle: 'Атомын задрал & Гинжин реакцын физик',
+    category: 'Физик & Технологи',
+    iconName: 'Atom',
+    summary: 'Уран-235 ба Плутони-239 атомын цөм нейтроноор бөмбөгдүүлж задрах үед асар их дулаан, цацраг туяа болон гинжин реакц үүсдэг. Энэ бол шинжлэх ухааны хамгийн сэтгэл хөдөлгөм бөгөөд аюултай үзэгдлүүдийн нэг юм.',
+    keyFacts: [
+      'Уран-235 атомын цөм нейтрон шингээж 2 жижиг цөмд задардаг (Nuclear Fission)',
+      'Миллисекундэд сая сая дахин үржих гинжин реакц (Chain Reaction)',
+      'Эйнштейний E = mc² томьёогоор өчүүхэн масс асар их энергид хувирдаг'
+    ],
+    visualTag: '⚛️ Цөмийн Физик',
+    detailsMn: 'Содбилэгийн "Гэж Юу Вэ?" сувгаас үзэж сонирхсон хамгийн сэтгэл хөдөлгөм сэдвүүдийн нэг. Атомын задрал болон термоцөмийн синтез хэрхэн явагддаг тухай шинжлэх ухааны мэдлэг.'
+  },
+  {
+    id: 'astronomy',
+    title: 'Одон орон ба Сансар огторгуйн нууцууд',
+    subtitle: 'Хар нүх, Галактикууд, Нарны аймаг ба Одод',
+    category: 'Астрономи & Физик',
+    iconName: 'Sparkles',
+    summary: 'Тэрбум тэрбум гэрлийн жилийн зайд орших Хар нүх, Галактикууд, Нарны аймаг болон Орчлон ертөнцийн нууцлаг үзэгдлүүдийн тухай сонирхолтой танин мэдэхүй.',
+    keyFacts: [
+      'Хар нүхний (Black Hole) асар их таталцлын хүчнээс гэрэл ч зугтаж чадахгүй',
+      'Манай Сүүн зам (Milky Way) галактикт 100-400 тэрбум од оршин байдаг',
+      'Гэрлийн хурдаар (300,000 км/сек) аялахад ч Орчлон ертөнц хязгааргүй уудам'
+    ],
+    visualTag: '🌌 Одон Орон Судлал',
+    detailsMn: 'Одон орон ба астрономи бол Содбилэгийн сонирхдог гол танин мэдэхүйн ертөнц. Нарны аймгийн гаригууд, Жеймс Уэбб телескоп болон супернова оддын мөхлийн тухай видеонууд.'
+  },
+  {
+    id: 'yt-channel',
+    title: '"Гэж Юу Вэ?" YouTube Суваг',
+    category: 'Танин Медэхүй & Шинжлэх ухаан',
+    subtitle: 'Мэдлэгийн царааг тэлэх танин мэдэхүйн суваг',
+    iconName: 'Youtube',
+    summary: 'Монголын хамгийн сонирхолтой "Гэж Юу Вэ?" YouTube суваг нь нийгэм, шинжлэх ухаан, түүх, технологийн нарийн төвөгтэй сэдвүүдийг маш ойлгомжтой бөгөөд сонирхолтой тайлбарладаг.',
+    keyFacts: [
+      'Хамгийн сонирхолтой асуултуудад шинжлэх ухааны үндэстэй хариулт өгдөг',
+      'Анимейшн & бодит баримт дээр суурилсан үзүүлэн тайлбарууд',
+      'Содбилэгийн чөлөөт цагаараа шимтэн үздэг №1 YouTube суваг'
+    ],
+    visualTag: '📺 YT "Гэж Юу Вэ?"',
+    detailsMn: '13 настай Содбилэгийн хувьд асуулт асууж, юмсын учир шалтгааныг олж мэдэх дуртай. "Гэж Юу Вэ?" суваг нь түүний мэдлэгийн царааг тэлж өгдөг.'
   }
 ];

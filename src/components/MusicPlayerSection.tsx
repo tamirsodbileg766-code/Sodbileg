@@ -32,15 +32,15 @@ export const MusicPlayerSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/15 text-[#111111] text-[10px] font-bold uppercase tracking-widest mb-3">
-              <Music className="w-3.5 h-3.5 text-[#D94F04]" />
+              <Music className="w-3.5 h-3.5 text-black" />
               <span>Section 05 — Хөгжим</span>
             </div>
             <h2 className="font-unbounded text-2xl sm:text-4xl font-black text-[#111111] uppercase tracking-tight">
-              Mxrning Star & The Lemons Вайб
+              Michael Jackson, Mxrning Star & Lemons (Гитар)
             </h2>
           </div>
           <p className="text-[#111111]/70 text-sm max-w-md mt-4 md:mt-0 font-medium">
-            Содбилэгийн хамгийн их сонсдог дуунууд болон хөгжмийн тоглуулагчийг эндээс мэдрээрэй.
+            Содбилэгийн гитараар тоглох дуртай болон хамгийн их сонсдог Michael Jackson-ийн "Billie Jean", "Beat It", "Chicago" зэрэг дуунууд.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ export const MusicPlayerSection: React.FC = () => {
 
                 {/* Spinning Vinyl Badge when Playing */}
                 {isPlaying && (
-                  <div className="absolute -top-3 -right-3 p-2.5 bg-[#111111] text-[#D94F04] border border-black/20 shadow-sm animate-spin">
+                  <div className="absolute -top-3 -right-3 p-2.5 bg-[#111111] text-white border border-black/20 shadow-sm animate-spin">
                     <Disc className="w-5 h-5" />
                   </div>
                 )}
@@ -80,12 +80,12 @@ export const MusicPlayerSection: React.FC = () => {
                 </h3>
 
                 <p className="text-[#111111]/80 font-bold text-xs uppercase tracking-wider">
-                  {currentTrack.artist} — <span className="text-[#D94F04] font-normal">{currentTrack.album}</span>
+                  {currentTrack.artist} — <span className="text-black font-semibold">{currentTrack.album}</span>
                 </p>
 
                 {/* Lyrics Highlight Card */}
                 <div className="p-4 bg-[#F7F7F7] border border-black/15 text-xs text-[#111111] mt-2">
-                  <p className="mb-1 text-[#D94F04] font-bold uppercase tracking-wider text-[10px]">Дууны үгээс:</p>
+                  <p className="mb-1 text-black font-bold uppercase tracking-wider text-[10px]">Дууны үгээс:</p>
                   <p className="font-serif-editorial italic text-sm text-[#111111] font-medium">{currentTrack.lyricsSnippet}</p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export const MusicPlayerSection: React.FC = () => {
                 <div
                   key={i}
                   className={`w-1.5 bg-[#111111] transition-all duration-300 ${
-                    isPlaying ? 'bg-[#D94F04] animate-pulse' : 'opacity-30'
+                    isPlaying ? 'bg-[#111111] animate-pulse' : 'opacity-30'
                   }`}
                   style={{
                     height: isPlaying ? `${Math.max(20, (height * Math.random()) % 100)}%` : '20%',
@@ -112,7 +112,7 @@ export const MusicPlayerSection: React.FC = () => {
                 onClick={() => toggleLike(currentTrack.id)}
                 className={`p-3 border transition-colors cursor-pointer ${
                   isLiked[currentTrack.id]
-                    ? 'text-[#D94F04] bg-[#D94F04]/10 border-[#D94F04]'
+                    ? 'text-white bg-[#111111] border-black'
                     : 'text-[#111111]/60 bg-white border-black/15 hover:text-[#111111]'
                 }`}
                 aria-label="Like song"
@@ -131,7 +131,7 @@ export const MusicPlayerSection: React.FC = () => {
 
                 <button
                   onClick={togglePlay}
-                  className="p-4 bg-[#D94F04] hover:bg-[#111111] text-white shadow-sm transition-all cursor-pointer active:scale-95"
+                  className="p-4 bg-[#111111] hover:bg-zinc-800 text-white shadow-sm transition-all cursor-pointer active:scale-95"
                   aria-label={isPlaying ? 'Pause' : 'Play'}
                 >
                   {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
@@ -147,7 +147,7 @@ export const MusicPlayerSection: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-2 text-[#111111] text-xs font-bold font-mono">
-                <Volume2 className="w-4 h-4 text-[#D94F04]" />
+                <Volume2 className="w-4 h-4 text-black" />
                 <span>{currentTrack.duration}</span>
               </div>
             </div>
@@ -157,7 +157,7 @@ export const MusicPlayerSection: React.FC = () => {
           <div className="lg:col-span-5 bg-white border border-black/20 p-6 sm:p-8 shadow-sm">
             <h4 className="font-unbounded font-black text-base uppercase text-[#111111] mb-6 flex items-center justify-between border-b border-black/10 pb-3">
               <span>Плейлист Дуунууд</span>
-              <Radio className="w-5 h-5 text-[#D94F04]" />
+              <Radio className="w-5 h-5 text-black" />
             </h4>
 
             <div className="space-y-3">
@@ -173,7 +173,7 @@ export const MusicPlayerSection: React.FC = () => {
                     className={`p-3.5 border transition-all duration-200 cursor-pointer flex items-center justify-between group ${
                       isSelected
                         ? 'bg-[#111111] text-white border-[#111111]'
-                        : 'bg-[#F7F7F7] border-black/10 hover:bg-white hover:border-[#D94F04]'
+                        : 'bg-[#F7F7F7] border-black/10 hover:bg-white hover:border-black'
                     }`}
                   >
                     <div className="flex items-center gap-3.5">
@@ -181,7 +181,7 @@ export const MusicPlayerSection: React.FC = () => {
                         <img src={track.coverUrl} alt={track.title} className="w-full h-full object-cover" />
                       </div>
                       <div>
-                        <h5 className={`font-bold text-xs uppercase tracking-wider ${isSelected ? 'text-[#D94F04]' : 'text-[#111111]'}`}>
+                        <h5 className={`font-bold text-xs uppercase tracking-wider ${isSelected ? 'text-white font-black' : 'text-[#111111]'}`}>
                           {track.title}
                         </h5>
                         <p className={`text-[11px] font-medium ${isSelected ? 'text-white/80' : 'text-[#111111]/60'}`}>{track.artist}</p>
@@ -192,12 +192,12 @@ export const MusicPlayerSection: React.FC = () => {
                       <span className={`text-xs font-mono font-bold ${isSelected ? 'text-white/70' : 'text-[#111111]/50'}`}>{track.duration}</span>
                       {isSelected && isPlaying ? (
                         <span className="flex gap-0.5 items-end h-4">
-                          <span className="w-1 bg-[#D94F04] h-full animate-bounce" />
-                          <span className="w-1 bg-[#D94F04] h-2/3 animate-bounce delay-100" />
-                          <span className="w-1 bg-[#D94F04] h-1/2 animate-bounce delay-200" />
+                          <span className="w-1 bg-white h-full animate-bounce" />
+                          <span className="w-1 bg-white h-2/3 animate-bounce delay-100" />
+                          <span className="w-1 bg-white h-1/2 animate-bounce delay-200" />
                         </span>
                       ) : (
-                        <Play className={`w-4 h-4 ${isSelected ? 'text-white' : 'text-[#111111]/40 group-hover:text-[#D94F04]'}`} />
+                        <Play className={`w-4 h-4 ${isSelected ? 'text-white' : 'text-[#111111]/40 group-hover:text-black'}`} />
                       )}
                     </div>
                   </div>

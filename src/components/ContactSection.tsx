@@ -56,19 +56,19 @@ export const ContactSection: React.FC = () => {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-[#F7F7F7] border border-black/10">
-                  <div className="p-2.5 bg-white border border-black/15 text-[#D94F04] shrink-0">
+                  <div className="p-2.5 bg-[#111111] text-white shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-[10px] text-[#111111]/60 font-bold uppercase tracking-wider block">Цахим шуудан</span>
-                    <a href={`mailto:${PERSONAL_INFO.email}`} className="font-bold text-xs text-[#111111] hover:text-[#D94F04] transition-colors">
+                    <a href={`mailto:${PERSONAL_INFO.email}`} className="font-bold text-xs text-[#111111] hover:underline transition-colors">
                       {PERSONAL_INFO.email}
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-[#F7F7F7] border border-black/10">
-                  <div className="p-2.5 bg-white border border-black/15 text-[#D94F04] shrink-0">
+                  <div className="p-2.5 bg-[#111111] text-white shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
@@ -80,7 +80,7 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-[#F7F7F7] border border-black/10">
-                  <div className="p-2.5 bg-white border border-black/15 text-[#D94F04] shrink-0">
+                  <div className="p-2.5 bg-[#111111] text-white shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -99,23 +99,23 @@ export const ContactSection: React.FC = () => {
                 </span>
                 <div className="flex items-center gap-3">
                   <a
-                    href="https://instagram.com"
+                    href="https://instagram.com/t.sdblg2"
                     target="_blank"
                     rel="noreferrer"
                     className="flex-1 p-3 bg-[#F7F7F7] border border-black/15 hover:bg-[#111111] hover:text-white text-[#111111] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all"
                   >
-                    <Instagram className="w-4 h-4 text-[#D94F04]" />
-                    <span>Instagram</span>
+                    <Instagram className="w-4 h-4 text-[#111111]" />
+                    <span>Instagram (@t.sdblg2)</span>
                   </a>
 
                   <a
-                    href="https://facebook.com"
+                    href="https://facebook.com/t.sdblg2"
                     target="_blank"
                     rel="noreferrer"
                     className="flex-1 p-3 bg-[#F7F7F7] border border-black/15 hover:bg-[#111111] hover:text-white text-[#111111] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all"
                   >
-                    <Facebook className="w-4 h-4 text-[#D94F04]" />
-                    <span>Facebook</span>
+                    <Facebook className="w-4 h-4 text-[#111111]" />
+                    <span>Facebook (t.sdblg2)</span>
                   </a>
                 </div>
               </div>
@@ -126,8 +126,8 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-7 bg-white border border-black/20 p-8 shadow-sm relative">
             {submitted ? (
               <div className="py-12 text-center space-y-4">
-                <div className="w-16 h-16 bg-[#111111] border border-black text-[#D94F04] flex items-center justify-center mx-auto animate-bounce">
-                  <CheckCircle2 className="w-8 h-8" />
+                <div className="w-16 h-16 bg-[#111111] border border-black text-white flex items-center justify-center mx-auto animate-bounce">
+                  <CheckCircle2 className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-unbounded font-black text-2xl text-[#111111] uppercase">
                   Баярлалаа! Зурвас амжилттай илгээгдлээ.
@@ -137,7 +137,7 @@ export const ContactSection: React.FC = () => {
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-4 px-6 py-3 bg-[#111111] hover:bg-[#D94F04] text-white font-bold text-xs uppercase tracking-widest transition-colors cursor-pointer"
+                  className="mt-4 px-6 py-3 bg-[#111111] hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-widest transition-colors cursor-pointer"
                 >
                   Дахин зурвас бичих
                 </button>
@@ -151,7 +151,7 @@ export const ContactSection: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-[10px] font-bold uppercase tracking-widest text-[#111111] mb-2">
-                      Таны нэр <span className="text-[#D94F04]">*</span>
+                      Таны нэр <span className="text-[#111111]">*</span>
                     </label>
                     <input
                       type="text"
@@ -187,6 +187,7 @@ export const ContactSection: React.FC = () => {
                     className="w-full px-4 py-3 bg-[#F7F7F7] border border-black/15 text-[#111111] text-xs focus:outline-none focus:border-[#111111] transition-colors cursor-pointer font-medium"
                   >
                     <option value="Волейболын бэлтгэл / Хамтран тоглох">Волейболын бэлтгэл / Хамтран тоглох</option>
+                    <option value="Mobile Legends (MLBB) / Tigreal дуэт багт тоглох">Mobile Legends (MLBB) / Tigreal дуэт багт тоглох</option>
                     <option value="Mxrning Star & Lemons дууны санал">Mxrning Star & Lemons дууны санал</option>
                     <option value="Demon Slayer ярилцлага">Demon Slayer ярилцлага</option>
                     <option value="Бусад асуулт">Бусад асуулт</option>
@@ -195,7 +196,7 @@ export const ContactSection: React.FC = () => {
 
                 <div>
                   <label className="block text-[10px] font-bold uppercase tracking-widest text-[#111111] mb-2">
-                    Зурвас <span className="text-[#D94F04]">*</span>
+                    Зурвас <span className="text-[#111111]">*</span>
                   </label>
                   <textarea
                     rows={4}
@@ -210,7 +211,7 @@ export const ContactSection: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-[#D94F04] hover:bg-[#111111] text-white font-bold text-xs uppercase tracking-widest transition-all cursor-pointer flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 shadow-sm"
+                  className="w-full py-4 bg-[#111111] hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-widest transition-all cursor-pointer flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 shadow-sm"
                 >
                   {isSubmitting ? (
                     <span>Илгээж байна...</span>

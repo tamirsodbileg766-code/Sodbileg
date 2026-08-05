@@ -39,6 +39,7 @@ export const Navbar: React.FC = () => {
     { id: 'mlbb', label: 'MLBB Tigreal' },
     { id: 'music', label: 'Хөгжим' },
     { id: 'anime', label: 'Demon Slayer' },
+    { id: 'gejyuve', label: 'Гэж Юу Вэ?' },
     { id: 'contact', label: 'Холбогдох' },
   ];
 
@@ -65,11 +66,11 @@ export const Navbar: React.FC = () => {
             onClick={() => scrollTo('hero')}
             className="flex items-center gap-3 text-left group focus:outline-none cursor-pointer"
           >
-            <div className="p-2 rounded-lg bg-[#111111] text-white group-hover:bg-[#D94F04] transition-colors">
+            <div className="p-2 rounded-lg bg-[#111111] text-white group-hover:bg-zinc-800 transition-colors">
               <BatLogo size={24} className="text-white" />
             </div>
             <div>
-              <span className="font-unbounded font-black text-base sm:text-lg tracking-tighter text-[#111111] group-hover:text-[#D94F04] transition-colors block leading-none">
+              <span className="font-unbounded font-black text-base sm:text-lg tracking-tighter text-[#111111] group-hover:text-zinc-700 transition-colors block leading-none">
                 СОДБИЛЭГ
               </span>
               <span className="text-[9px] font-bold tracking-[0.25em] text-[#111111]/50 uppercase block mt-1">
@@ -102,7 +103,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={() => scrollTo('contact')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-none border border-[#111111] bg-[#111111] text-white hover:bg-[#D94F04] hover:border-[#D94F04] font-bold text-xs tracking-widest uppercase transition-all duration-200 cursor-pointer active:scale-95 shadow-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-none border border-[#111111] bg-[#111111] text-white hover:bg-zinc-800 hover:border-zinc-800 font-bold text-xs tracking-widest uppercase transition-all duration-200 cursor-pointer active:scale-95 shadow-sm"
             >
               <span>Холбоо Барих</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -112,7 +113,7 @@ export const Navbar: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2.5 rounded-lg bg-[#111111] text-white border border-black/10 hover:bg-[#D94F04] transition-colors cursor-pointer"
+            className="md:hidden p-2.5 rounded-lg bg-[#111111] text-white border border-black/10 hover:bg-zinc-800 transition-colors cursor-pointer"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -135,13 +136,13 @@ export const Navbar: React.FC = () => {
                 }`}
               >
                 <span>{link.label}</span>
-                {activeSection === link.id && <span className="w-2 h-2 rounded-full bg-[#D94F04] animate-ping" />}
+                {activeSection === link.id && <span className="w-2 h-2 rounded-full bg-black animate-ping" />}
               </button>
             ))}
             <div className="pt-4 mt-2">
               <button
                 onClick={() => scrollTo('contact')}
-                className="w-full py-3.5 bg-[#111111] text-white font-bold text-xs tracking-widest uppercase text-center shadow-sm hover:bg-[#D94F04] transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3.5 bg-[#111111] text-white font-bold text-xs tracking-widest uppercase text-center shadow-sm hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2"
               >
                 <span>Мессеж Илгээх</span>
                 <ArrowUpRight className="w-4 h-4" />

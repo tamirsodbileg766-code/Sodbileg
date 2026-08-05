@@ -20,26 +20,26 @@ export const Hero: React.FC = () => {
             Содбилэг • Archival Monolith
           </span>
           <span className="text-black/20">|</span>
-          <span className="text-xs font-bold tracking-widest text-[#D94F04] uppercase">
+          <span className="text-xs font-bold tracking-widest text-[#111111] uppercase">
             13 Настай
           </span>
         </div>
 
         {/* Main 1-Sentence Editorial Headline */}
         <h1 className="font-unbounded text-3xl sm:text-5xl lg:text-6xl font-black text-[#111111] tracking-tighter leading-[1.15] max-w-5xl mx-auto mb-6 uppercase">
-          Волейболын <span className="font-serif-editorial italic font-normal text-[#D94F04] lowercase">талбайн</span> энерги, хөгжмийн хэмнэлээр тэмүүлэгч <span className="border-b-4 border-[#D94F04] pb-1">Содбилэг</span>.
+          Волейболын <span className="font-serif-editorial italic font-normal text-black lowercase">талбайн</span> энерги, хөгжмийн хэмнэлээр тэмүүлэгч <span className="border-b-4 border-black pb-1">Содбилэг</span>.
         </h1>
 
         {/* Sub-headline with serif touch */}
         <p className="font-montserrat text-[#111111]/80 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
-          Спортын тэмүүлэл, <strong className="text-[#111111] font-bold underline decoration-[#D94F04]">Mxrning Star & The Lemons</strong>-ийн аялгуу болон <strong className="text-[#111111] font-bold underline decoration-[#D94F04]">Demon Slayer</strong> анимегийн тэвчээр хатуужил нэг дор.
+          Спортын тэмүүлэл, <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Гитар тоглох</strong> сонирхол, <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Michael Jackson, Mxrning Star & Lemons</strong>-ийн аялгуу, <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">"Гэж Юу Вэ?"</strong> YT суваг болон <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Demon Slayer</strong> аниме нэг дор.
         </p>
 
         {/* Editorial Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <button
             onClick={() => scrollTo('hobbies')}
-            className="w-full sm:w-auto px-8 py-4 bg-[#D94F04] text-white font-bold text-xs tracking-widest uppercase shadow-md hover:bg-[#111111] transition-all duration-200 flex items-center justify-center gap-3 cursor-pointer active:scale-95"
+            className="w-full sm:w-auto px-8 py-4 bg-[#111111] text-white font-bold text-xs tracking-widest uppercase shadow-md hover:bg-zinc-800 transition-all duration-200 flex items-center justify-center gap-3 cursor-pointer active:scale-95"
           >
             <Sparkles className="w-4 h-4 text-white" />
             <span>Сонирхолуудтай Танилцах</span>
@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
             onClick={() => scrollTo('volleyball')}
             className="w-full sm:w-auto px-8 py-4 bg-white border border-[#111111] text-[#111111] font-bold text-xs tracking-widest uppercase shadow-sm hover:bg-[#111111] hover:text-white transition-all duration-200 flex items-center justify-center gap-3 cursor-pointer"
           >
-            <Trophy className="w-4 h-4 text-[#D94F04]" />
+            <Trophy className="w-4 h-4 text-black" />
             <span>Волейбол Тоглох</span>
           </button>
         </div>
@@ -58,17 +58,17 @@ export const Hero: React.FC = () => {
         {/* Figure Cards with Editorial Grid & Hairlines */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-6 text-left">
           {/* Card 1 */}
-          <div className="p-6 bg-white border border-black/15 shadow-sm group hover:border-[#D94F04] transition-all duration-300 relative">
+          <div className="p-6 bg-white border border-black/15 shadow-sm group hover:border-black transition-all duration-300 relative">
             <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#111111]/40 block mb-2">
               Figure 1.0 — Athlete
             </span>
             <div className="flex items-center gap-3 mb-3">
-              <div className="p-2.5 bg-[#111111] text-white group-hover:bg-[#D94F04] transition-colors">
+              <div className="p-2.5 bg-[#111111] text-white group-hover:bg-zinc-800 transition-colors">
                 <Trophy className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="font-unbounded font-black text-sm text-[#111111] uppercase">Волейбол</h3>
-                <span className="text-[11px] font-serif-editorial italic text-[#D94F04] font-bold">Талбайн Довтлогч</span>
+                <span className="text-[11px] font-serif-editorial italic text-black font-bold">Талбайн Довтлогч</span>
               </div>
             </div>
             <p className="text-xs text-[#111111]/75 leading-relaxed font-medium">
@@ -77,36 +77,36 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="p-6 bg-white border border-black/15 shadow-sm group hover:border-[#D94F04] transition-all duration-300 relative">
+          <div className="p-6 bg-white border border-black/15 shadow-sm group hover:border-black transition-all duration-300 relative">
             <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#111111]/40 block mb-2">
-              Figure 2.0 — Music
+              Figure 2.0 — Music & Guitar
             </span>
             <div className="flex items-center gap-3 mb-3">
-              <div className="p-2.5 bg-[#111111] text-white group-hover:bg-[#D94F04] transition-colors">
+              <div className="p-2.5 bg-[#111111] text-white group-hover:bg-zinc-800 transition-colors">
                 <Music className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-unbounded font-black text-sm text-[#111111] uppercase">Дуу Хөгжим</h3>
-                <span className="text-[11px] font-serif-editorial italic text-[#D94F04] font-bold">Mxrning Star & Lemons</span>
+                <h3 className="font-unbounded font-black text-sm text-[#111111] uppercase">Гитар & Хөгжим</h3>
+                <span className="text-[11px] font-serif-editorial italic text-black font-bold">Michael Jackson & Mxrning Star</span>
               </div>
             </div>
             <p className="text-xs text-[#111111]/75 leading-relaxed font-medium">
-              Монголын инди & лофай хэмнэл, шөнийн аялгуунуудын цуглуулга.
+              Гитар тоглох дуртай! Michael Jackson (Billie Jean, Beat It, Chicago) болон Mxrning Star.
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="p-6 bg-white border border-black/15 shadow-sm group hover:border-[#D94F04] transition-all duration-300 relative">
+          <div className="p-6 bg-white border border-black/15 shadow-sm group hover:border-black transition-all duration-300 relative">
             <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#111111]/40 block mb-2">
               Figure 3.0 — Anime
             </span>
             <div className="flex items-center gap-3 mb-3">
-              <div className="p-2.5 bg-[#111111] text-white group-hover:bg-[#D94F04] transition-colors">
+              <div className="p-2.5 bg-[#111111] text-white group-hover:bg-zinc-800 transition-colors">
                 <Flame className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="font-unbounded font-black text-sm text-[#111111] uppercase">Demon Slayer</h3>
-                <span className="text-[11px] font-serif-editorial italic text-[#D94F04] font-bold">Галын Амьсгал</span>
+                <span className="text-[11px] font-serif-editorial italic text-black font-bold">Галын Амьсгал</span>
               </div>
             </div>
             <p className="text-xs text-[#111111]/75 leading-relaxed font-medium">
