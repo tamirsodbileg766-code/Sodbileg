@@ -1,3 +1,9 @@
+export interface LyricLine {
+  time: number;
+  text: string;
+  section?: string;
+}
+
 export interface Track {
   id: string;
   title: string;
@@ -7,6 +13,10 @@ export interface Track {
   coverUrl: string;
   vibeTag: string;
   lyricsSnippet: string;
+  audioUrl?: string;
+  youtubeId?: string;
+  fullLyrics?: string;
+  timedLyrics?: LyricLine[];
 }
 
 export interface BreathingStyle {

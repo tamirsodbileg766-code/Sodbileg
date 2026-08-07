@@ -30,12 +30,12 @@ export const About: React.FC = () => {
                 {/* Profile Image Representation */}
                 <div className="relative w-40 h-40 mx-auto mb-6 border border-black/20 overflow-hidden bg-[#111111]">
                   <img
-                    src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80"
-                    alt="Содбилэг - Волейбол тоглож буй агшин"
+                    src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                    alt="Содбилэг - MLBB тоглож буй агшин"
                     className="w-full h-full object-cover filter contrast-105 hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute bottom-2 left-2 px-2 py-0.5 bg-[#111111] text-white text-[9px] font-bold uppercase tracking-widest">
-                    VOLLEYBALL
+                    MLBB GAMER
                   </span>
                 </div>
 
@@ -51,7 +51,10 @@ export const About: React.FC = () => {
                     🏆 13 Настай
                   </span>
                   <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
-                    🏐 Волейбол
+                    🎮 MLBB Gamer
+                  </span>
+                  <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
+                    🛡️ Tigreal Tank
                   </span>
                   <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
                     🎸 Гитарчин
@@ -61,9 +64,6 @@ export const About: React.FC = () => {
                   </span>
                   <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
                     📺 "Гэж Юу Вэ?" YT
-                  </span>
-                  <span className="px-2.5 py-1 bg-[#F7F7F7] text-[#111111] text-xs font-bold border border-black/10">
-                    🛡️ MLBB Tigreal
                   </span>
                 </div>
 
@@ -92,11 +92,11 @@ export const About: React.FC = () => {
             </h3>
 
             <p className="text-[#111111]/80 text-sm sm:text-base leading-relaxed font-medium">
-              Намайг Содбилэг гэдэг. Би одоогоор 13 настай. Миний амьдралын хамгийн том сонирхол бол <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">волейболын спорт</strong> ба <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">гитар тоглох</strong> юм. Талбай дээр багийнхантайгаа тэмцэхийн сацуу гитараар дуртай аялгуугаа тоглож сонирхдог.
+              Намайг Содбилэг гэдэг. Би одоогоор 13 настай. Миний амьдралын хамгийн том сонирхол бол <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Mobile Legends (MLBB) тоглох</strong> ба <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">гитар тоглох</strong> юм. Тоглоомонд багаараа тактик зохиож тэмцэхийн сацуу гитараар дуртай аялгуугаа тоглож сонирхдог.
             </p>
 
             <p className="text-[#111111]/80 text-sm sm:text-base leading-relaxed font-medium">
-              Бэлтгэлийн дараа эсвэл чөлөөт цагаараа <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Mobile Legends (MLBB)</strong> тоглож, өөрийн дуртай <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Tigreal</strong> танк баатар дээр тоглодог. Мөн <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Michael Jackson</strong>-ийн "Billie Jean", "Beat It", "Chicago", мөн <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Mxrning Star, The Lemons</strong> дууг сонсож, дуртай <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">"Гэж Юу Вэ?"</strong> YouTube суваг болон <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Demon Slayer</strong> анимег шимтэн үздэг.
+              Чөлөөт цагаараа <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Mobile Legends (MLBB)</strong> тоглож, өөрийн дуртай <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Tigreal</strong> танк баатар дээр 53.1% winrate-тэй тоглодог. Мөн <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Michael Jackson</strong>-ийн "Billie Jean", "Beat It", "Chicago", мөн <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Mxrning Star, The Lemons</strong> дууг сонсож, дуртай <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">"Гэж Юу Вэ?"</strong> YouTube суваг болон <strong className="text-[#111111] font-bold underline underline-offset-4 decoration-black">Demon Slayer</strong> анимег шимтэн үздэг.
             </p>
 
             {/* Quick Feature Checklist */}
@@ -104,8 +104,8 @@ export const About: React.FC = () => {
               <div className="flex items-start gap-3 p-3 bg-white border border-black/10">
                 <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">Волейболын шийдэмгий цохилт</h4>
-                  <p className="text-xs text-[#111111]/70 mt-1">Бөмбөг унах хүртэл багийн ажиллагааг эрхэмлэдэг.</p>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#111111]">Mobile Legends Gamer</h4>
+                  <p className="text-xs text-[#111111]/70 mt-1">Багийн стратеги, бамбай болон тактикч сэтгэлгээг эрхэмлэдэг.</p>
                 </div>
               </div>
 

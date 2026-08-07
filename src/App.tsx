@@ -3,7 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { HobbiesGrid } from './components/HobbiesGrid';
-import { VolleyballSection } from './components/VolleyballSection';
+import { Volleyball3DSection } from './components/Volleyball3DSection';
 import { MlbbTigrealSection } from './components/MlbbTigrealSection';
 import { MusicPlayerSection } from './components/MusicPlayerSection';
 import { AnimeSection } from './components/AnimeSection';
@@ -28,8 +28,8 @@ export default function App() {
         {/* Hobbies Grid */}
         <HobbiesGrid />
 
-        {/* Volleyball Interactive Court Section */}
-        <VolleyballSection />
+        {/* 3D Multiplayer Volleyball Engine */}
+        <Volleyball3DSection />
 
         {/* MLBB Tigreal Tank Showcase */}
         <MlbbTigrealSection />

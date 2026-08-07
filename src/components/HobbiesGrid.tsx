@@ -1,10 +1,12 @@
 import React from 'react';
 import { HOBBIES } from '../data/portfolioData';
-import { Trophy, Music, Flame, ArrowRight, Sparkles, Shield } from 'lucide-react';
+import { Trophy, Music, Flame, ArrowRight, Sparkles, Shield, Gamepad2 } from 'lucide-react';
 
 export const HobbiesGrid: React.FC = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
+      case 'Gamepad2':
+        return <Gamepad2 className="w-6 h-6 text-[#111111]" />;
       case 'Volleyball':
         return <Trophy className="w-6 h-6 text-[#111111]" />;
       case 'Shield':
@@ -37,7 +39,7 @@ export const HobbiesGrid: React.FC = () => {
             Содбилэгийн Гол Хоббинууд
           </h2>
           <p className="text-[#111111]/70 text-sm sm:text-base font-medium">
-            Спорт, MLBB Tigreal тоглоом, хөгжим ба анимегийн хослол — Миний амьдралын хэв маягийг тодорхойлогч 4 үндсэн ертөнц.
+            Mobile Legends гейминг, MLBB Tigreal тоглоом, хөгжим ба анимегийн хослол — Миний амьдралын хэв маягийг тодорхойлогч 4 үндсэн ертөнц.
           </p>
         </div>
 

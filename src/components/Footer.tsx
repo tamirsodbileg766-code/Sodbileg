@@ -42,9 +42,6 @@ export const Footer: React.FC = () => {
             <button onClick={() => scrollTo('hobbies')} className="hover:text-white transition-colors cursor-pointer">
               Сонирхол
             </button>
-            <button onClick={() => scrollTo('volleyball')} className="hover:text-white transition-colors cursor-pointer">
-              Волейбол
-            </button>
             <button onClick={() => scrollTo('mlbb')} className="hover:text-white transition-colors cursor-pointer">
               MLBB Tigreal
             </button>
@@ -53,6 +50,9 @@ export const Footer: React.FC = () => {
             </button>
             <button onClick={() => scrollTo('anime')} className="hover:text-white transition-colors cursor-pointer">
               Demon Slayer
+            </button>
+            <button onClick={() => scrollTo('gejyuve')} className="hover:text-white transition-colors cursor-pointer">
+              Гэж Юу Вэ?
             </button>
             <button onClick={() => scrollTo('contact')} className="hover:text-white transition-colors cursor-pointer">
               Холбогдох
@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 text-[11px]">
           <p>© {new Date().getFullYear()} Содбилэг. Эдиториал дизайн ба бүх эрх хуулиар хамгаалагдсан.</p>
           <p className="flex items-center gap-1 font-serif-editorial italic">
-            <span>Волейболын тэмүүлэл ба дуу хөгжмөөр бүтээв</span>
+            <span>MLBB стратеги ба дуу хөгжмөөр бүтээв</span>
             <Heart className="w-3.5 h-3.5 text-white fill-current inline ml-1" />
           </p>
         </div>
