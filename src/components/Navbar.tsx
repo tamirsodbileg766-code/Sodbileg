@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { BatLogo } from './BatLogo';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  onOpenIdolModal?: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onOpenIdolModal }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
@@ -99,11 +103,20 @@ export const Navbar: React.FC = () => {
             })}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <button
+              onClick={() => {
+                if (onOpenIdolModal) onOpenIdolModal();
+              }}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-amber-500/80 bg-amber-500 text-black hover:bg-amber-400 font-black text-xs tracking-wider uppercase transition-all duration-200 cursor-pointer active:scale-95 shadow-md"
+            >
+              <span className="text-sm">🤖</span>
+              <span>My Idol</span>
+            </button>
+            <button
               onClick={() => scrollTo('contact')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-none border border-[#111111] bg-[#111111] text-white hover:bg-zinc-800 hover:border-zinc-800 font-bold text-xs tracking-widest uppercase transition-all duration-200 cursor-pointer active:scale-95 shadow-sm"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-none border border-[#111111] bg-[#111111] text-white hover:bg-zinc-800 hover:border-zinc-800 font-bold text-xs tracking-widest uppercase transition-all duration-200 cursor-pointer active:scale-95 shadow-sm"
             >
               <span>Холбоо Барих</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -139,10 +152,19 @@ export const Navbar: React.FC = () => {
                 {activeSection === link.id && <span className="w-2 h-2 rounded-full bg-black animate-ping" />}
               </button>
             ))}
-            <div className="pt-4 mt-2">
+            <div className="pt-2 flex flex-col gap-2">
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (onOpenIdolModal) onOpenIdolModal();
+                }}
+                className="w-full py-3.5 bg-amber-500 text-black font-black text-xs tracking-widest uppercase text-center shadow-md hover:bg-amber-400 transition-colors flex items-center justify-center gap-2 rounded-xl"
+              >
+                <span>🤖 My Idol (Lionel Messi Coach)</span>
+              </button>
               <button
                 onClick={() => scrollTo('contact')}
-                className="w-full py-3.5 bg-[#111111] text-white font-bold text-xs tracking-widest uppercase text-center shadow-sm hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 bg-[#111111] text-white font-bold text-xs tracking-widest uppercase text-center shadow-sm hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2 rounded-xl"
               >
                 <span>Мессеж Илгээх</span>
                 <ArrowUpRight className="w-4 h-4" />

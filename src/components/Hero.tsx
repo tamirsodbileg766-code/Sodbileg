@@ -1,7 +1,11 @@
 import React from 'react';
 import { ArrowDown, Flame, Music, Shield, Sparkles, ArrowRight } from 'lucide-react';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  onOpenIdolModal?: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onOpenIdolModal }) => {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -37,20 +41,28 @@ export const Hero: React.FC = () => {
         {/* Editorial Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <button
+            onClick={onOpenIdolModal}
+            className="w-full sm:w-auto px-7 py-4 bg-amber-500 text-black font-black text-xs tracking-widest uppercase shadow-md hover:bg-amber-400 transition-all duration-200 flex items-center justify-center gap-2.5 cursor-pointer active:scale-95 border border-black/10"
+          >
+            <span className="text-base">🤖</span>
+            <span>My Idol (Messi Coach)</span>
+          </button>
+
+          <button
             onClick={() => scrollTo('hobbies')}
-            className="w-full sm:w-auto px-8 py-4 bg-[#111111] text-white font-bold text-xs tracking-widest uppercase shadow-md hover:bg-zinc-800 transition-all duration-200 flex items-center justify-center gap-3 cursor-pointer active:scale-95"
+            className="w-full sm:w-auto px-7 py-4 bg-[#111111] text-white font-bold text-xs tracking-widest uppercase shadow-md hover:bg-zinc-800 transition-all duration-200 flex items-center justify-center gap-2.5 cursor-pointer active:scale-95"
           >
             <Sparkles className="w-4 h-4 text-white" />
-            <span>Сонирхолуудтай Танилцах</span>
+            <span>Сонирхолууд</span>
             <ArrowRight className="w-4 h-4" />
           </button>
 
           <button
             onClick={() => scrollTo('mlbb')}
-            className="w-full sm:w-auto px-8 py-4 bg-white border border-[#111111] text-[#111111] font-bold text-xs tracking-widest uppercase shadow-sm hover:bg-[#111111] hover:text-white transition-all duration-200 flex items-center justify-center gap-3 cursor-pointer"
+            className="w-full sm:w-auto px-7 py-4 bg-white border border-[#111111] text-[#111111] font-bold text-xs tracking-widest uppercase shadow-sm hover:bg-[#111111] hover:text-white transition-all duration-200 flex items-center justify-center gap-2.5 cursor-pointer"
           >
-            <Shield className="w-4 h-4 text-black" />
-            <span>MLBB Tigreal Харах</span>
+            <Shield className="w-4 h-4" />
+            <span>MLBB Tigreal</span>
           </button>
         </div>
 

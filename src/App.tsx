@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -11,16 +11,20 @@ import { YoutubeGejYuVeSection } from './components/YoutubeGejYuVeSection';
 import { StatsAndQuotes } from './components/StatsAndQuotes';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { IdolChatModal } from './components/IdolChatModal';
+import { MeAiChatPopup } from './components/MeAiChatPopup';
 
 export default function App() {
+  const [isIdolModalOpen, setIsIdolModalOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-[#F7F7F7] text-[#111111] selection:bg-[#D94F04] selection:text-white font-montserrat overflow-x-hidden">
+    <div className="min-h-screen bg-[#F7F7F7] text-[#111111] selection:bg-[#D94F04] selection:text-white font-montserrat overflow-x-hidden relative">
       {/* Sticky Navigation */}
-      <Navbar />
+      <Navbar onOpenIdolModal={() => setIsIdolModalOpen(true)} />
 
       <main>
         {/* Hero Section */}
-        <Hero />
+        <Hero onOpenIdolModal={() => setIsIdolModalOpen(true)} />
 
         {/* About Section */}
         <About />
@@ -52,6 +56,15 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* 🤖 Idol Chat Modal (Lionel Messi) */}
+      <IdolChatModal
+        isOpen={isIdolModalOpen}
+        onClose={() => setIsIdolModalOpen(false)}
+      />
+
+      {/* Messenger-style Popup Widget (Sodbileg Tamir Me-AI Assistant) */}
+      <MeAiChatPopup />
     </div>
   );
 }
