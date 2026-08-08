@@ -99,23 +99,23 @@ export const ContactSection: React.FC = () => {
                 </span>
                 <div className="flex items-center gap-3">
                   <a
-                    href="https://instagram.com/t.sdblg2"
+                    href={`https://instagram.com/${PERSONAL_INFO.socials.instagram.replace('@', '')}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex-1 p-3 bg-[#F7F7F7] border border-black/15 hover:bg-[#111111] hover:text-white text-[#111111] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all"
                   >
                     <Instagram className="w-4 h-4 text-[#111111]" />
-                    <span>Instagram (@t.sdblg2)</span>
+                    <span>Instagram ({PERSONAL_INFO.socials.instagram})</span>
                   </a>
 
                   <a
-                    href="https://facebook.com/t.sdblg2"
+                    href={`https://facebook.com/${PERSONAL_INFO.socials.facebook}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex-1 p-3 bg-[#F7F7F7] border border-black/15 hover:bg-[#111111] hover:text-white text-[#111111] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all"
                   >
                     <Facebook className="w-4 h-4 text-[#111111]" />
-                    <span>Facebook (t.sdblg2)</span>
+                    <span>Facebook ({PERSONAL_INFO.socials.facebook})</span>
                   </a>
                 </div>
               </div>

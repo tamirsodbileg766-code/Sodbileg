@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { GEJ_YU_VE_TOPICS } from '../data/portfolioData';
 import { YoutubeTopic } from '../types';
-import { Youtube, Atom, Sparkles, HelpCircle, CheckCircle2, Orbit, Flame } from 'lucide-react';
+import { Youtube, Atom, HelpCircle, CheckCircle2, Orbit, ExternalLink } from 'lucide-react';
 
 export const YoutubeGejYuVeSection: React.FC = () => {
-  const [activeTopic, setActiveTopic] = useState<YoutubeTopic>(GEJ_YU_VE_TOPICS[0]); // Default nuclear bomb topic
+  const [activeTopic, setActiveTopic] = useState<YoutubeTopic>(GEJ_YU_VE_TOPICS[0]);
   const [fissionStep, setFissionStep] = useState<number>(0);
   const [fissionActive, setFissionActive] = useState<boolean>(false);
 
@@ -42,11 +42,22 @@ export const YoutubeGejYuVeSection: React.FC = () => {
             <span>Section 06.5 — YouTube "Гэж Юу Вэ?" & Танин Медэхүй</span>
           </div>
           <h2 className="font-unbounded text-2xl sm:text-4xl font-black text-white uppercase tracking-tight mb-4">
-            "Гэж Юу Вэ?" & Шинжлэх Ухааны Сонирхол
+            "Гэж Юу Вэ?" & Шинжлэх Ухаан
           </h2>
-          <p className="text-white/70 text-sm sm:text-base font-medium">
-            13 настай Содбилэгийн шимтэн үздэг "Гэж Юу Вэ?" YouTube суваг ба Цөмийн Физик, Одон орон судлалын дуртай сэдвүүд.
+          <p className="text-white/70 text-sm sm:text-base font-medium mb-6">
+            13 настай Содбилэгийн шимтэн үздэг "Гэж Юу Вэ?" YouTube суваг, Цөмийн Физик болон Одон орон судлалын дуртай сэдвүүд.
           </p>
+
+          <a
+            href="https://www.youtube.com/@GejYuVe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer"
+          >
+            <Youtube className="w-4 h-4" />
+            <span>"Гэж Юу Вэ?" Албан Ёсны Суваг Рүү Очих</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
 
         {/* Topic Selector Tabs */}
@@ -301,3 +312,4 @@ export const YoutubeGejYuVeSection: React.FC = () => {
     </section>
   );
 };
+

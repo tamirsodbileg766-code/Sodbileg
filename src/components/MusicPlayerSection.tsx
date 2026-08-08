@@ -12,6 +12,7 @@ export const MusicPlayerSection: React.FC = () => {
   const [isLiked, setIsLiked] = useState<Record<string, boolean>>({ '1': true, '2': true });
   const [showFullLyrics, setShowFullLyrics] = useState(true);
   const [playerMode, setPlayerMode] = useState<'youtube' | 'audio'>('youtube');
+  const [lyricsOffset, setLyricsOffset] = useState<number>(0);
 
   const currentTrack: Track | undefined = TRACKS[currentTrackIndex];
 
@@ -340,12 +341,13 @@ export const MusicPlayerSection: React.FC = () => {
     };
   }, [isPlaying, playerMode, useSynth, totalSeconds]);
 
-  // Determine active lyric line index based on current time
+  // Determine active lyric line index based on current time + lyricsOffset
   const timedLyrics = currentTrack.timedLyrics || [];
+  const effectiveLyricTime = Math.max(0, currentTime + lyricsOffset);
   let activeLyricIndex = -1;
   if (timedLyrics.length > 0) {
     for (let i = 0; i < timedLyrics.length; i++) {
-      if (currentTime >= timedLyrics[i].time) {
+      if (effectiveLyricTime >= timedLyrics[i].time) {
         activeLyricIndex = i;
       } else {
         break;
@@ -529,57 +531,82 @@ export const MusicPlayerSection: React.FC = () => {
 
                   {showFullLyrics ? (
                     timedLyrics.length > 0 ? (
-                      <div
-                        ref={lyricsContainerRef}
-                        className="max-h-60 overflow-y-auto pr-2 font-sans text-xs border-t border-black/10 pt-2 bg-white p-2.5 border space-y-1.5 scroll-smooth"
-                      >
-                        {timedLyrics.map((line, idx) => {
-                          const isActive = idx === activeLyricIndex;
-                          return (
-                            <div
-                              key={idx}
-                              ref={isActive ? activeLyricRef : null}
-                              onClick={() => {
-                                setCurrentTime(line.time);
-                                if (audioRef.current) {
-                                  audioRef.current.currentTime = line.time;
-                                }
-                              }}
-                              className={`p-2.5 rounded-xs transition-all duration-300 cursor-pointer flex items-start gap-3 group ${
-                                isActive
-                                  ? 'bg-[#111111] text-white font-bold border-l-4 border-l-rose-500 shadow-md scale-[1.01]'
-                                  : 'hover:bg-zinc-100 text-zinc-700'
-                              }`}
-                            >
-                              <span
-                                className={`text-[10px] font-mono shrink-0 px-1.5 py-0.5 border ${
-                                  isActive
-                                    ? 'bg-rose-600 text-white border-rose-500 font-bold'
-                                    : 'bg-zinc-100 text-zinc-500 border-zinc-200 group-hover:border-zinc-400'
+                      <div>
+                        {/* Lyrics Offset Quick Adjuster */}
+                        <div className="flex flex-wrap items-center justify-between gap-2 bg-zinc-100 p-2 mb-2 border text-[10px] font-mono">
+                          <span className="font-bold text-zinc-700 flex items-center gap-1">
+                            ⏱️ Үг тааруулах offset: <span className="text-black font-black">{lyricsOffset > 0 ? `+${lyricsOffset}с` : `${lyricsOffset}с`}</span>
+                          </span>
+                          <div className="flex items-center gap-1">
+                            {[-5, -2, 0, 2, 5].map((offsetVal) => (
+                              <button
+                                key={offsetVal}
+                                onClick={() => setLyricsOffset(offsetVal)}
+                                className={`px-2 py-0.5 border text-[10px] font-bold cursor-pointer transition-colors ${
+                                  lyricsOffset === offsetVal
+                                    ? 'bg-black text-white border-black'
+                                    : 'bg-white text-zinc-700 border-zinc-300 hover:border-black'
                                 }`}
                               >
-                                {formatTime(line.time)}
-                              </span>
-                              <div className="flex-1">
-                                {line.section && (
-                                  <span
-                                    className={`text-[9px] font-bold uppercase tracking-wider block mb-0.5 ${
-                                      isActive ? 'text-rose-400' : 'text-zinc-400'
-                                    }`}
-                                  >
-                                    {line.section}
-                                  </span>
+                                {offsetVal === 0 ? '0с (Хэвийн)' : offsetVal > 0 ? `+${offsetVal}с` : `${offsetVal}с`}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div
+                          ref={lyricsContainerRef}
+                          className="max-h-60 overflow-y-auto pr-2 font-sans text-xs border-t border-black/10 pt-2 bg-white p-2.5 border space-y-1.5 scroll-smooth"
+                        >
+                          {timedLyrics.map((line, idx) => {
+                            const isActive = idx === activeLyricIndex;
+                            return (
+                              <div
+                                key={idx}
+                                ref={isActive ? activeLyricRef : null}
+                                onClick={() => {
+                                  const targetTime = Math.max(0, line.time - lyricsOffset);
+                                  setCurrentTime(targetTime);
+                                  if (audioRef.current) {
+                                    audioRef.current.currentTime = targetTime;
+                                  }
+                                }}
+                                className={`p-2.5 rounded-xs transition-all duration-300 cursor-pointer flex items-start gap-3 group ${
+                                  isActive
+                                    ? 'bg-[#111111] text-white font-bold border-l-4 border-l-rose-500 shadow-md scale-[1.01]'
+                                    : 'hover:bg-zinc-100 text-zinc-700'
+                                }`}
+                              >
+                                <span
+                                  className={`text-[10px] font-mono shrink-0 px-1.5 py-0.5 border ${
+                                    isActive
+                                      ? 'bg-rose-600 text-white border-rose-500 font-bold'
+                                      : 'bg-zinc-100 text-zinc-500 border-zinc-200 group-hover:border-zinc-400'
+                                  }`}
+                                >
+                                  {formatTime(line.time)}
+                                </span>
+                                <div className="flex-1">
+                                  {line.section && (
+                                    <span
+                                      className={`text-[9px] font-bold uppercase tracking-wider block mb-0.5 ${
+                                        isActive ? 'text-rose-400' : 'text-zinc-400'
+                                      }`}
+                                    >
+                                      {line.section}
+                                    </span>
+                                  )}
+                                  <p className={`text-xs ${isActive ? 'text-white font-semibold text-sm' : 'text-zinc-800'}`}>
+                                    {line.text}
+                                  </p>
+                                </div>
+                                {isActive && (
+                                  <Sparkles className="w-3.5 h-3.5 text-rose-400 shrink-0 animate-pulse mt-1" />
                                 )}
-                                <p className={`text-xs ${isActive ? 'text-white font-semibold text-sm' : 'text-zinc-800'}`}>
-                                  {line.text}
-                                </p>
                               </div>
-                              {isActive && (
-                                <Sparkles className="w-3.5 h-3.5 text-rose-400 shrink-0 animate-pulse mt-1" />
-                              )}
-                            </div>
-                          );
-                        })}
+                            );
+                          })}
+                        </div>
                       </div>
                     ) : (
                       <div className="max-h-48 overflow-y-auto pr-2 font-mono text-xs leading-relaxed text-[#111111] whitespace-pre-line border-t border-black/10 pt-2 bg-white p-3 border">

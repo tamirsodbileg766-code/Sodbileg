@@ -69,4 +69,5 @@ export interface YoutubeTopic {
   keyFacts: string[];
   visualTag: string;
   detailsMn: string;
+  youtubeEmbedId?: string;
 }
